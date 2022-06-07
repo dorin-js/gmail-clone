@@ -1,0 +1,85 @@
+import { Button } from "@mui/material";
+import React, { useState } from "react";
+import "./Sidebar.css";
+import CreateIcon from "@mui/icons-material/Create";
+import InboxIcon from "@mui/icons-material/Inbox";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import StarBorderOutlinedIcon from "@mui/icons-material/Star";
+import LabelImportantIcon from "@mui/icons-material/LabelImportant";
+import SendIcon from "@mui/icons-material/Send";
+import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
+import SidebarOption from "./SidebarOption";
+
+function Sidebar() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const handleListItemClick = (index) => {
+    setSelectedIndex(index);
+    console.log(index);
+  };
+  return (
+    <div className="sidebar">
+      <Button
+        startIcon={<CreateIcon fontSize="large" />}
+        className="sidebar__compose"
+      >
+        Compose
+      </Button>
+
+      <SidebarOption Icon={InboxIcon} title="Inbox" number={54} bold selected />
+      <SidebarOption Icon={StarBorderOutlinedIcon} title="Starred" />
+      <SidebarOption Icon={AccessTimeIcon} title="Snoozed" />
+      <SidebarOption Icon={LabelImportantIcon} title="Important" />
+      <SidebarOption Icon={SendIcon} title="Sent" />
+      <SidebarOption Icon={InsertDriveFileOutlinedIcon} title="Drafts" />
+    </div>
+  );
+}
+
+export default Sidebar;
+// import * as React from "react";
+// import Box from "@mui/material/Box";
+// import List from "@mui/material/List";
+// import ListItemButton from "@mui/material/ListItemButton";
+// import ListItemIcon from "@mui/material/ListItemIcon";
+// import ListItemText from "@mui/material/ListItemText";
+// import InboxIcon from "@mui/icons-material/Inbox";
+// import DraftsIcon from "@mui/icons-material/Drafts";
+
+// export default function SelectedListItem() {
+//   const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+//   const handleListItemClick = (event, index) => {
+//     setSelectedIndex(index);
+//   };
+
+//   return (
+//     <Box
+//       sx={{
+//         width: "100%",
+//         maxWidth: 240,
+//         bgcolor: "background.paper",
+//       }}
+//     >
+//       <List component="nav" aria-label="main mailbox folders">
+//         <ListItemButton
+//           selected={selectedIndex === 0}
+//           onClick={(event) => handleListItemClick(event, 0)}
+//         >
+//           <ListItemIcon>
+//             <InboxIcon />
+//           </ListItemIcon>
+//           <ListItemText primary="Inbox" />
+//         </ListItemButton>
+//         <ListItemButton
+//           selected={selectedIndex === 1}
+//           onClick={(event) => handleListItemClick(event, 1)}
+//         >
+//           <ListItemIcon>
+//             <DraftsIcon />
+//           </ListItemIcon>
+//           <ListItemText primary="Drafts" />
+//         </ListItemButton>
+//       </List>
+//     </Box>
+//   );
+// }
