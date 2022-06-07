@@ -1,17 +1,5 @@
-.df {
-  display: flex;
-}
-.jcc {
-  justify-content: center;
-}
-.jcsb {
-  justify-content: space-between;
-}
-.aic {
-  align-items: center;
-}
-
 .header {
+  position: relative;
   border-bottom: 1px solid whitesmoke;
   padding: 8px;
 }
@@ -20,9 +8,12 @@
   margin-left: 5px;
 }
 .header__middle {
-  flex: 0.7;
+  position: absolute;
+  left: 255px;
+  right: 160px;
+  min-width: auto;
+  max-width: 720px;
   background-color: whitesmoke;
-  /* padding: 10px; */
   border-radius: 8px;
 }
 .header__middle > .MuiSvgIcon-root {

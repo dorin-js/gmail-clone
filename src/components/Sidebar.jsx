@@ -7,21 +7,21 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import StarBorderOutlinedIcon from "@mui/icons-material/Star";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import SendIcon from "@mui/icons-material/Send";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
+import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
+import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import SidebarOption from "./SidebarOption";
 
 function Sidebar() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const handleListItemClick = (index) => {
-    setSelectedIndex(index);
-    console.log(index);
+  const [expanded, setExpanded] = useState(false);
+  const expand = (e) => {
+    setExpanded(!expanded);
+    console.log(expanded);
   };
   return (
     <div className="sidebar">
-      <Button
-        startIcon={<CreateIcon fontSize="large" />}
-        className="sidebar__compose"
-      >
+      <Button startIcon={<CreateIcon />} className="sidebar__compose">
         Compose
       </Button>
 
@@ -31,6 +31,17 @@ function Sidebar() {
       <SidebarOption Icon={LabelImportantIcon} title="Important" />
       <SidebarOption Icon={SendIcon} title="Sent" />
       <SidebarOption Icon={InsertDriveFileOutlinedIcon} title="Drafts" />
+      <SidebarOption
+        Icon={ExpandMoreIcon}
+        title={expanded ? "Less" : "More"}
+        click={expand}
+      />
+      {expanded && (
+        <>
+          <SidebarOption Icon={ReportGmailerrorredOutlinedIcon} title="Spam" />
+          <SidebarOption Icon={DeleteOutlineOutlinedIcon} title="Trash" />{" "}
+        </>
+      )}
     </div>
   );
 }

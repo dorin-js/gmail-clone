@@ -1,6 +1,6 @@
 .sidebar__option {
   height: 35px;
-  padding: 0 12px 0 26px;
+  padding: 0 13px 0 26px;
   max-width: 240px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -26,7 +26,7 @@
 }
 
 .sidebar--selected {
-  color: #d93025;
+  color: #d93025 !important;
   background: #fce8e6;
   /* font-weight: 600 !important; */
 }
@@ -36,4 +36,7 @@
   margin-left: 18px;
   font-size: 14px;
   /* font-weight: 400; */
+}
+.badge-span {
+  color: #d93025 !important;
 }
