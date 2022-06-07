@@ -9,6 +9,11 @@ import {
   MoreVert,
   Redo,
 } from "@mui/icons-material";
+import Section from "./Section";
+import InboxIcon from "@mui/icons-material/Inbox";
+import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
+
 function EmailList() {
   return (
     <div className="email-list">
@@ -37,6 +42,12 @@ function EmailList() {
           </IconButton>
         </div>
       </div>
+      <div className="email-list__sections df aic">
+        <Section Icon={InboxIcon} title="Primary" color="red" selected />
+        <Section Icon={PeopleOutlinedIcon} title="Social" color="blue" />
+        <Section Icon={ForumOutlinedIcon} title="Forums" color="green" />
+      </div>
+      <div className="email-list__emails"></div>
     </div>
   );
 }
