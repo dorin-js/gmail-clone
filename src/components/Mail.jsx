@@ -82,10 +82,10 @@ function Mail() {
           <div className="sender__time">7:12 AM</div>
         </div>
         <div className="mail__message">
-          <code>
+          <pre>
             Pleace confirm your email address with the code provided bellow or
             click on the link to confirm it
-          </code>
+          </pre>
         </div>
       </div>
     </div>
