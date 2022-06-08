@@ -12,12 +12,13 @@ import {
 import Section from "./Section";
 import InboxIcon from "@mui/icons-material/Inbox";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
+import SellOutlinedIcon from "@mui/icons-material/SellOutlined";
+import EmailRow from "./EmailRow";
 
 function EmailList() {
   return (
     <div className="email-list">
-      <div className="email-list__settings df jcsb">
+      <div className="email-list__settings df aic jcsb">
         <div className="email-list__settings--left">
           <Checkbox />
           <IconButton>
@@ -45,9 +46,31 @@ function EmailList() {
       <div className="email-list__sections df aic">
         <Section Icon={InboxIcon} title="Primary" color="red" selected />
         <Section Icon={PeopleOutlinedIcon} title="Social" color="blue" />
-        <Section Icon={ForumOutlinedIcon} title="Forums" color="green" />
+        <Section Icon={SellOutlinedIcon} title="Forums" color="green" />
       </div>
-      <div className="email-list__emails"></div>
+      <div className="email-list__emails">
+        <EmailRow
+          id="42314xzv"
+          title="Twitch"
+          subject="Hey fellow streamer!!!"
+          description="This is a test"
+          time="10pm"
+        />
+        <EmailRow
+          id="dsfzcvzxv98"
+          title="Dorin"
+          subject="Test test!!!"
+          description="This is a test"
+          time="10pm"
+        />
+        <EmailRow
+          id="fsdaxdsa987"
+          title="Epic games"
+          subject="Password confirmation!!!"
+          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
+          time="10pm"
+        />
+      </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import AppsIcon from "@mui/icons-material/Apps";
 import logo_dark from "../assets/logo_dark.png";
 import SearchInput from "./Search";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -15,7 +16,9 @@ function Header() {
         <IconButton>
           <MenuIcon />
         </IconButton>
-        <img src={logo_dark} alt="logo" />
+        <Link to="/">
+          <img src={logo_dark} alt="logo" />
+        </Link>
       </div>
       <div className="header__middle df aic">
         <SearchInput />

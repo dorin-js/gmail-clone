@@ -7,12 +7,22 @@
   background-color: #fff;
   padding: 10px;
   color: rgb(78, 78, 78);
+  border-width: 3px !important;
+  border-style: hidden !important;
+}
+.email-list__section > span {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 .section--selected {
   background-color: whitesmoke;
   border-width: 3px !important;
+  border-bottom-style: solid !important;
 }
 .email-list__section:hover {
   background-color: whitesmoke;
-  /* border-width: 3px !important; */
+  border-width: 3px !important;
+  border-bottom-style: solid !important;
 }
