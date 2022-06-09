@@ -22,11 +22,11 @@ export const mailSlice = createSlice({
     setShowInputs: (state) => {
       state.showInputs = true;
     },
-    setHideInputs: (state) => {
-      state.showInputs = false;
-    },
     showSnackbar: (state) => {
       state.snackbarVisibility = true;
+    },
+    hideSnackbar: (state) => {
+      state.snackbarVisibility = false;
     },
   },
 });
@@ -36,8 +36,8 @@ export const {
   closeSendMessage,
   switchShowInputs,
   setShowInputs,
-  setHideInputs,
   showSnackbar,
+  hideSnackbar,
 } = mailSlice.actions;
 
 export const selectSendMessageIsOpen = (state) => state.mail.sendMessageIsOpen;

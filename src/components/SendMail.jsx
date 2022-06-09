@@ -8,6 +8,8 @@ import {
   closeSendMessage,
   selectShowInputs,
   setShowInputs,
+  showSnackbar,
+  hideSnackbar,
   switchShowInputs,
 } from "../features/mailSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,6 +25,7 @@ function SendMail() {
 
   const dispatch = useDispatch();
   const showInputs = useSelector(selectShowInputs);
+  // const snackbarVisibility = useSelector(selectSnackbarVisibility);
 
   const onSubmit = (formData) => {
     console.log(formData);
@@ -35,14 +38,11 @@ function SendMail() {
       });
       console.log("Document written with ID: ", docRef.id);
       dispatch(closeSendMessage());
+      dispatch(showSnackbar());
     } catch (e) {
       console.error("Error adding document: ", e);
       alert("Error sending email: ", e);
     }
-    //   db.collection("emails").add({
-
-    //     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    //   });
   };
 
   return (
