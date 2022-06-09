@@ -46,7 +46,7 @@ function EmailList() {
       <div className="email-list__sections df aic">
         <Section Icon={InboxIcon} title="Primary" color="red" selected />
         <Section Icon={PeopleOutlinedIcon} title="Social" color="dodgerblue" />
-        <Section Icon={SellOutlinedIcon} title="Forums" color="green" />
+        <Section Icon={SellOutlinedIcon} title="Promotions" color="green" />
       </div>
       <div className="email-list__emails">
         <EmailRow

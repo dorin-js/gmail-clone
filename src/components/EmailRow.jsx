@@ -4,7 +4,7 @@ import {
 } from "@mui/icons-material";
 import { Checkbox, IconButton } from "@mui/material";
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./EmailRow.css";
 
 function EmailRow({ id, title, subject, description, time }) {

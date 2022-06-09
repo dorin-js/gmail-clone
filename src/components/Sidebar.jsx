@@ -12,6 +12,8 @@ import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutl
 import ReportGmailerrorredOutlinedIcon from "@mui/icons-material/ReportGmailerrorredOutlined";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import SidebarOption from "./SidebarOption";
+import { useDispatch } from "react-redux";
+import { openSendMessage, setShowInputs } from "../features/mailSlice";
 
 function Sidebar() {
   const [expanded, setExpanded] = useState(false);
@@ -19,9 +21,18 @@ function Sidebar() {
     setExpanded(!expanded);
     console.log(expanded);
   };
+
+  const dispatch = useDispatch();
   return (
     <div className="sidebar">
-      <Button startIcon={<CreateIcon />} className="sidebar__compose">
+      <Button
+        startIcon={<CreateIcon />}
+        className="sidebar__compose"
+        onClick={() => {
+          dispatch(openSendMessage());
+          dispatch(setShowInputs());
+        }}
+      >
         Compose
       </Button>
 

@@ -2,7 +2,6 @@ import React from "react";
 import "./Header.css";
 import { IconButton, Avatar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AppsIcon from "@mui/icons-material/Apps";
 import logo_dark from "../assets/logo_dark.png";

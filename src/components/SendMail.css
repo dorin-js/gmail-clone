@@ -4,7 +4,8 @@
   right: 50px;
   background-color: white;
   width: 40%;
-  height: 50%;
+  max-height: 60%;
+  min-height: 50%;
   max-width: 500px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -17,6 +18,7 @@
   color: white;
   background-color: #404040;
   border-radius: inherit;
+  cursor: pointer;
 }
 .send-mail__options--icons {
   color: lightgray;
@@ -39,6 +41,16 @@
 }
 .mail-form__input--large {
   flex: 1;
-  padding: 15px 0;
+  padding: 15px 10px 15px 0;
   font-size: 13px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.mail-form__input--large:focus {
+  border: none;
+  outline: none;
+}
+.input-required::placeholder {
+  color: red;
 }

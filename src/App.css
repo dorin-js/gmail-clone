@@ -16,7 +16,9 @@
 .app {
   height: 100vh;
 }
-input,
-textarea {
+input {
   all: unset;
+}
+.rotated-180 {
+  transform: rotate(180deg);
 }
