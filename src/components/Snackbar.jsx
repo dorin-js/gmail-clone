@@ -3,27 +3,31 @@ import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import { selectSnackbarVisibility, hideSnackbar } from "../features/mailSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function SimpleSnackbar() {
-  const [open, setOpen] = React.useState(false);
+  const snackbarVisibility = useSelector(selectSnackbarVisibility);
+  const dispatch = useDispatch();
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  // const [open, setOpen] = React.useState(false);
+
+  // const handleClick = () => {
+  //   dispatch(showSnackbar());
+  // };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
-
-    setOpen(false);
+    dispatch(hideSnackbar());
   };
 
   const action = (
     <React.Fragment>
-      <Button color="secondary" size="small" onClick={handleClose}>
+      {/* <Button color="secondary" size="small" onClick={handleClose}>
         UNDO
-      </Button>
+      </Button> */}
       <IconButton
         size="small"
         aria-label="close"
@@ -37,12 +41,11 @@ export default function SimpleSnackbar() {
 
   return (
     <div>
-      <Button onClick={handleClick}>Open simple snackbar</Button>
       <Snackbar
-        open={open}
-        autoHideDuration={6000}
+        open={snackbarVisibility}
+        autoHideDuration={3000}
         onClose={handleClose}
-        message="Note archived"
+        message="Email sent"
         action={action}
       />
     </div>

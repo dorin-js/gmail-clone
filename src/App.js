@@ -7,10 +7,15 @@ import EmailList from "./components/EmailList";
 import Mail from "./components/Mail";
 import SendMail from "./components/SendMail";
 import { useSelector } from "react-redux";
-import { selectSendMessageIsOpen } from "./features/mailSlice";
+import {
+  selectSendMessageIsOpen,
+  selectSnackbarVisibility,
+} from "./features/mailSlice";
+import SimpleSnackbar from "./components/Snackbar";
 
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
+  const snackbarVisibility = useSelector(selectSnackbarVisibility);
   return (
     <BrowserRouter>
       <div className="app">
@@ -23,6 +28,7 @@ function App() {
           </Routes>
         </div>
         {sendMessageIsOpen && <SendMail />}
+        {snackbarVisibility && <SimpleSnackbar />}
       </div>
     </BrowserRouter>
   );
