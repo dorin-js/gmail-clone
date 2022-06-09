@@ -4,7 +4,6 @@
   right: 50px;
   background-color: white;
   width: 40%;
-  max-height: 60%;
   max-width: 500px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -28,6 +27,7 @@
 .mail-form {
   flex-direction: column;
   flex: 1;
+  padding-bottom: 15px;
 }
 .mail-form input {
   outline: none;
@@ -39,13 +39,11 @@
   font-size: 14px;
 }
 .mail-form__input--large {
-  flex: 1;
-  padding: 15px 10px 15px 0;
+  padding: 15px 10px 25px 0;
   font-size: 13px;
   border: none;
   outline: none;
   resize: none;
-  min-height: 300px;
 }
 .mail-form__input--large:focus {
   border: none;

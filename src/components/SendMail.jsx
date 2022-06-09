@@ -1,18 +1,27 @@
 import React from "react";
+
+//CSS
 import "./SendMail.css";
+
+//Material UI
 import MinimizeOutlinedIcon from "@mui/icons-material/MinimizeOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { Button, IconButton } from "@mui/material";
+
+//React hook form
 import { useForm } from "react-hook-form";
+
+//Redux
 import {
   closeSendMessage,
   selectShowInputs,
   setShowInputs,
   showSnackbar,
-  hideSnackbar,
   switchShowInputs,
 } from "../features/mailSlice";
 import { useDispatch, useSelector } from "react-redux";
+
+//Firebase/Firestore
 import { db } from "../firebase/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
@@ -25,10 +34,8 @@ function SendMail() {
 
   const dispatch = useDispatch();
   const showInputs = useSelector(selectShowInputs);
-  // const snackbarVisibility = useSelector(selectSnackbarVisibility);
 
   const onSubmit = (formData) => {
-    console.log(formData);
     try {
       const docRef = addDoc(collection(db, "emails"), {
         to: formData.to,
@@ -98,6 +105,7 @@ function SendMail() {
             {...register("subject")}
           />
           <textarea
+            rows="15"
             name="message"
             aria-label="message"
             {...register("message")}

@@ -9,7 +9,6 @@ import "./EmailRow.css";
 
 function EmailRow({ id, title, subject, description, time }) {
   const navigate = useNavigate();
-  // const { id } = useParams();
   return (
     <div className="email-row df aic" onClick={() => navigate("/mail/" + id)}>
       <div className="email-row__options options">

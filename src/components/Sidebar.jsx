@@ -19,7 +19,6 @@ function Sidebar() {
   const [expanded, setExpanded] = useState(false);
   const expand = (e) => {
     setExpanded(!expanded);
-    console.log(expanded);
   };
 
   const dispatch = useDispatch();

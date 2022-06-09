@@ -7,7 +7,7 @@ function SidebarOption({ Icon, title, number, selected, bold, click }) {
       className={`sidebar__option df aic ${selected && "sidebar--selected"} ${
         bold && "option--bold"
       }`}
-      onClick={() => click()}
+      onClick={click && (() => click())}
     >
       <Icon />
       <span className="option-span">{title}</span>

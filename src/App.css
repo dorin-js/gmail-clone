@@ -22,3 +22,10 @@ input {
 .rotated-180 {
   transform: rotate(180deg);
 }
+.loading {
+  margin: 0 auto;
+  padding: 5px;
+  width: fit-content;
+  background-color: rgba(248, 189, 39, 0.555);
+  border: 1px solid rgba(17, 16, 13, 0.555);
+}
