@@ -4,6 +4,7 @@ const initialState = {
   sendMessageIsOpen: false,
   showInputs: true,
   snackbarVisibility: false,
+  viewedMail: null,
 };
 
 export const mailSlice = createSlice({
@@ -28,6 +29,9 @@ export const mailSlice = createSlice({
     hideSnackbar: (state) => {
       state.snackbarVisibility = false;
     },
+    readMail: (state, action) => {
+      state.viewedMail = action.payload;
+    },
   },
 });
 
@@ -38,10 +42,13 @@ export const {
   setShowInputs,
   showSnackbar,
   hideSnackbar,
+  readMail,
 } = mailSlice.actions;
 
 export const selectSendMessageIsOpen = (state) => state.mail.sendMessageIsOpen;
 export const selectShowInputs = (state) => state.mail.showInputs;
 export const selectSnackbarVisibility = (state) =>
   state.mail.snackbarVisibility;
+export const selectViewedMail = (state) => state.mail.viewedMail;
+
 export default mailSlice.reducer;

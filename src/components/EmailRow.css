@@ -1,16 +1,16 @@
 .email-row {
   position: relative;
   gap: 0px 10px;
-  border-top: 1px solid var(--border-gray);
+  border-bottom: 1px solid var(--border-gray);
   /* position: relative; */
   font-size: 14px;
 }
-.email-row:last-child {
+/* .email-row:last-child {
   border-bottom: 1px solid var(--border-gray);
-}
+} */
 .email-row:hover {
   border-top: 1px solid lightgray;
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.74);
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.74);
   cursor: pointer;
 }
 .email-row__options {

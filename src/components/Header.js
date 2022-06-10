@@ -7,8 +7,12 @@ import AppsIcon from "@mui/icons-material/Apps";
 import logo_dark from "../assets/logo_dark.png";
 import SearchInput from "./Search";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectAuthentificatedUser } from "../features/userSlice";
+import AccountMenu from "./AccountMenu";
 
 function Header() {
+  const user = useSelector(selectAuthentificatedUser);
   return (
     <div className="header df aic jcsb">
       <div className="header__left df aic">
@@ -29,14 +33,7 @@ function Header() {
         <IconButton>
           <AppsIcon />
         </IconButton>
-        <IconButton>
-          <Avatar
-            sx={{
-              width: "32px",
-              height: "32px",
-            }}
-          />
-        </IconButton>
+        <AccountMenu photourl={user?.photoUrl} />
       </div>
     </div>
   );

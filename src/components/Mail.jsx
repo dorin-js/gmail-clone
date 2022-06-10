@@ -17,9 +17,12 @@ import { IconButton } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Mail.css";
+import { selectViewedMail } from "../features/mailSlice";
+import { useSelector } from "react-redux";
 
 function Mail() {
   const navigate = useNavigate();
+  const viewedMail = useSelector(selectViewedMail);
   return (
     <div className="mail">
       <div className="mail__tools df aic jcsb">
@@ -66,26 +69,23 @@ function Mail() {
       </div>
       <div className="mail__body df">
         <div className="mail__header__title df aic">
-          <h2 className="mail__subject">Subject</h2>
+          <h2 className="mail__subject">{viewedMail?.subject}</h2>
           <IconButton>
             <LabelImportant className="mail__important" />
           </IconButton>
         </div>
         <div className="mail__header__sender df jcsb">
           <div className="sender__info">
-            <span className="sender__title">Twitch</span>
+            <span className="sender__title">{viewedMail?.title}</span>
             <span className="sender__email">
               {" "}
-              {"<"}info@twitch.com{">"}
+              {"<"}info@mail.com{">"}
             </span>
           </div>
-          <div className="sender__time">7:12 AM</div>
+          <div className="sender__time">{viewedMail?.time}</div>
         </div>
         <div className="mail__message">
-          <code>
-            Pleace confirm your email address with the code provided bellow or
-            click on the link to confirm it
-          </code>
+          <code>{viewedMail?.description}</code>
         </div>
       </div>
     </div>

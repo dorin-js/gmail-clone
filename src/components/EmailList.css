@@ -1,17 +1,25 @@
 .email-list {
   /* width: 100%; */
   flex: 1;
+  display: flex;
+  flex-direction: column;
   /* background-color: rgb(245, 245, 245); */
-  height: calc(100vh - 65px);
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* height: calc(100vh - 65px - 95px); */
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
 }
 .email-list__settings {
   height: 48px;
   margin: 0 15px 0 0 !important;
   padding: 0 15px 0 5px;
 }
-.email-list__sections {
+.email-list__header {
   position: sticky;
   top: -1px;
+  border-bottom: 1px solid var(--border-gray);
+}
+.email-list__emails {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

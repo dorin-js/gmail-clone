@@ -1,6 +1,7 @@
 :root {
   --border-gray: rgb(238, 238, 238);
 }
+
 .df {
   display: flex;
 }
@@ -28,4 +29,7 @@ input {
   width: fit-content;
   background-color: rgba(248, 189, 39, 0.555);
   border: 1px solid rgba(17, 16, 13, 0.555);
+}
+.app {
+  overflow-y: hidden;
 }
