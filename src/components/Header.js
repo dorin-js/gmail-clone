@@ -33,7 +33,7 @@ function Header() {
         <IconButton>
           <AppsIcon />
         </IconButton>
-        <AccountMenu photourl={user?.photoUrl} />
+        <AccountMenu photourl={user.photoUrl} />
       </div>
     </div>
   );

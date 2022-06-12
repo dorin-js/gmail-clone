@@ -31,12 +31,21 @@ function EmailRow({ id, title, subject, description, time }) {
   return (
     <div className="email-row df aic" onClick={openMail}>
       <div className="email-row__options options">
-        <Checkbox onClick={(e) => e.stopPropagation()} />
-        <IconButton>
-          <StarBorderOutlined onClick={(e) => e.stopPropagation()} />
+        <Checkbox
+          style={{ zIndex: 999 }}
+          onClick={(e) => e.stopPropagation()}
+        />
+        <IconButton
+          style={{ zIndex: 999 }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <StarBorderOutlined />
         </IconButton>
-        <IconButton>
-          <LabelImportantOutlined onClick={(e) => e.stopPropagation()} />
+        <IconButton
+          style={{ zIndex: 999 }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <LabelImportantOutlined />
         </IconButton>
       </div>
       <h4 className="email-row__title title">{title}</h4>

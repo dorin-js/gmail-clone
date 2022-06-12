@@ -34,7 +34,7 @@ function EmailList() {
 
     console.log(emails);
     return () => unsubscribe();
-  }, ["emails"]);
+  }, []);
 
   return (
     <div className="email-list">
@@ -87,133 +87,6 @@ function EmailList() {
               time={new Date(mail.timestamp?.seconds * 1000).toLocaleString()}
             />
           ))}
-
-        <EmailRow
-          id="42314xzv"
-          title="Twitch"
-          subject="Hey fellow streamer!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="dsfzcvzxv98"
-          title="Dorin"
-          subject="Test test!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="fsdaxdsa987"
-          title="Epic games"
-          subject="Password confirmation!!!"
-          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
-          time="10pm"
-        />
-        <EmailRow
-          id="42314xzv"
-          title="Twitch"
-          subject="Hey fellow streamer!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="dsfzcvzxv98"
-          title="Dorin"
-          subject="Test test!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="fsdaxdsa987"
-          title="Epic games"
-          subject="Password confirmation!!!"
-          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
-          time="10pm"
-        />
-        <EmailRow
-          id="42314xzv"
-          title="Twitch"
-          subject="Hey fellow streamer!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="dsfzcvzxv98"
-          title="Dorin"
-          subject="Test test!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="fsdaxdsa987"
-          title="Epic games"
-          subject="Password confirmation!!!"
-          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
-          time="10pm"
-        />
-        <EmailRow
-          id="42314xzv"
-          title="Twitch"
-          subject="Hey fellow streamer!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="dsfzcvzxv98"
-          title="Dorin"
-          subject="Test test!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="fsdaxdsa987"
-          title="Epic games"
-          subject="Password confirmation!!!"
-          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
-          time="10pm"
-        />
-        <EmailRow
-          id="42314xzv"
-          title="Twitch"
-          subject="Hey fellow streamer!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="dsfzcvzxv98"
-          title="Dorin"
-          subject="Test test!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="fsdaxdsa987"
-          title="Epic games"
-          subject="Password confirmation!!!"
-          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
-          time="10pm"
-        />
-        <EmailRow
-          id="42314xzv"
-          title="Twitch"
-          subject="Hey fellow streamer!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="dsfzcvzxv98"
-          title="Dorin"
-          subject="Test test!!!"
-          description="This is a test"
-          time="10pm"
-        />
-        <EmailRow
-          id="fsdaxdsa987"
-          title="Epic games"
-          subject="Password confirmation!!!"
-          description="Pleace confirm your email address with the code provided bellow or click on the link to confirm it"
-          time="10pm"
-        />
       </div>
     </div>
   );

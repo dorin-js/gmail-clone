@@ -60,6 +60,10 @@ function App() {
             <Routes>
               <Route path="/" element={<EmailList />} />
               <Route path="/mail/:id" element={<Mail />} />
+              <Route path="/starred" element={<EmailList />} />
+              {/* <Route path="/" element={<EmailList />} />
+              <Route path="/" element={<EmailList />} />
+              <Route path="/" element={<EmailList />} /> */}
               <Route path="/table" element={<EnhancedTable />} />
             </Routes>
           </div>

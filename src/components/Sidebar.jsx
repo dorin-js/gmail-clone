@@ -14,13 +14,14 @@ import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined
 import SidebarOption from "./SidebarOption";
 import { useDispatch } from "react-redux";
 import { openSendMessage, setShowInputs } from "../features/mailSlice";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
   const expand = (e) => {
     setExpanded(!expanded);
   };
-
   const dispatch = useDispatch();
   return (
     <div className="sidebar">
@@ -36,7 +37,11 @@ function Sidebar() {
       </Button>
 
       <SidebarOption Icon={InboxIcon} title="Inbox" number={54} bold selected />
-      <SidebarOption Icon={StarBorderOutlinedIcon} title="Starred" />
+      <SidebarOption
+        Icon={StarBorderOutlinedIcon}
+        title="Starred"
+        navigate={navigate}
+      />
       <SidebarOption Icon={AccessTimeIcon} title="Snoozed" />
       <SidebarOption Icon={LabelImportantIcon} title="Important" />
       <SidebarOption Icon={SendIcon} title="Sent" />

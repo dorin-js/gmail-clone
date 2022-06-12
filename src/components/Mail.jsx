@@ -19,16 +19,23 @@ import { useNavigate } from "react-router-dom";
 import "./Mail.css";
 import { selectViewedMail } from "../features/mailSlice";
 import { useSelector } from "react-redux";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../firebase/firebase";
 
 function Mail() {
   const navigate = useNavigate();
   const viewedMail = useSelector(selectViewedMail);
+  const deleteEmail = async (id) => {
+    const ref = doc(db, "emails", id);
+    await deleteDoc(ref);
+    navigate("/");
+  };
   return (
     <div className="mail">
       <div className="mail__tools df aic jcsb">
         <div className="mail__tools--left">
           <IconButton onClick={() => navigate("/")}>
-            <ArrowBackOutlined />
+            <ArrowBackOutlined style={{ color: "red" }} />
           </IconButton>
           <IconButton>
             <MoveToInboxOutlined />
@@ -36,8 +43,8 @@ function Mail() {
           <IconButton>
             <ErrorOutlineOutlined />
           </IconButton>
-          <IconButton>
-            <DeleteOutlined />
+          <IconButton onClick={() => deleteEmail(viewedMail?.id)}>
+            <DeleteOutlined style={{ color: "red" }} />
           </IconButton>
           <IconButton>
             <EmailOutlined />

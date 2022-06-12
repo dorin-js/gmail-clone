@@ -83,6 +83,7 @@ export default function AccountMenu({ photourl }) {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <Avatar src={photourl} alt="User's pic" />
+        <h4>{user.displayName}</h4>
         <Divider />
         <MenuItem onClick={signUserOut}>
           <ListItemIcon>

@@ -11,7 +11,7 @@
 .email-list__settings {
   height: 48px;
   margin: 0 15px 0 0 !important;
-  padding: 0 15px 0 5px;
+  padding: 0 15px 0 0;
 }
 .email-list__header {
   position: sticky;
